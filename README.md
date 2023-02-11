@@ -6,7 +6,7 @@ HTTP request --> middleware --> guard --> interceptor --> pipeline --> filter --
 create a new database in your mysql,name:nest_wuliangtech
 npm run start:dev
 
-nest-cli.json file config
+#nest-cli.json file config
 
 "collection": "@nestjs/schematics",
   "sourceRoot": "apps/app-gateway/src",
