@@ -26,7 +26,7 @@ This project uses TypeOrm to connect to the MySql database, please configure the
 
 
 
-#under folder :microservice-architecture> 
+#under folder nest-microservice
 #create the new micro-services
 
 nest g app service-a ../apps/modules
