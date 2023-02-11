@@ -1,0 +1,65 @@
+# 开发环境配置
+app:
+  prefix: '/prod-api'
+  port: 8080
+  logger:
+    # 项目日志存储路径，相对路径（相对本项目根目录）或绝对路径
+    dir: '../logs'
+  # 文件相关, 开发环境
+  file:
+    # location 文件上传后存储目录，相对路径（相对本项目根目录）或绝对路径
+    location: '../upload'
+    # 文件服务器地址
+    domain: 'http://localhost:8081'
+    # 文件虚拟路径, 必须以 / 开头
+    serveRoot: '/static'
+# 数据库配置
+db:
+  mysql:
+    host: 'localhost'
+    username: 'root'
+    password: 'mysqlpassword'
+    database: 'kapok'
+    port: 36693
+    charset: 'utf8mb4'
+    logger: 'advanced-console'
+    logging: true
+    multipleStatements: true
+    dropSchema: false
+    synchronize: true
+    supportBigNumbers: true
+    bigNumberStrings: true
+
+# redis 配置
+redis:
+  host: 'localhost'
+  port: 6379
+  password: 123456
+  db: 0
+  keyPrefix: 'nest:'
+
+# jwt 配置
+jwt:
+  secretkey: 'zANDwNQVFzxlfG9myPxVWAkq4iXJEPhI'
+  expiresin: '1h'
+  refreshExpiresIn: '2h'
+# 权限 白名单配置
+perm:
+  router:
+    whitelist: [{ path: '/register', method: 'POST'  }, { path: '/login', method: 'POST' }, { path: '/perm/{id}', method: 'GET' }, { path: '/oss/upload', method: 'POST' }]
+
+# 用户相关
+# 初始密码， 重置密码
+user:
+  initialPassword: '123456'
+
+cloud:
+  nacos:
+    discovery:
+      # 服务注册地址
+      server-addr: 127.0.0.1:39693
+    config:
+      # 配置中心地址
+      server-addr: 127.0.0.1:39693
+      # 配置文件格式
+      file-extension: yml

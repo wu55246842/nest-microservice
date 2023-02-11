@@ -1,0 +1,52 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/app-gateway/src",
+  "monorepo": true,
+  "root": "apps/app-gateway",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/app-gateway/tsconfig.app.json",
+    "assets": ["**/*.yml","**/*.ttf"],
+    "watchAssets": true
+  },
+  "projects": {
+    "app-gateway": {
+      "type": "application",
+      "root": "apps/app-gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/app-gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/app-gateway/tsconfig.app.json"
+      }
+    },
+    "service-a": {
+      "type": "application",
+      "root": "apps/modules/service-a",
+      "entryFile": "main",
+      "sourceRoot": "apps/modules/service-a/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/modules/service-a/tsconfig.app.json"
+      }
+    },
+    "service-b": {
+      "type": "application",
+      "root": "apps/modules/service-b",
+      "entryFile": "main",
+      "sourceRoot": "apps/modules/service-b/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/modules/service-b/tsconfig.app.json"
+      }
+    },
+
+    "service-c": {
+      "type": "application",
+      "root": "apps/modules/service-c",
+      "entryFile": "main",
+      "sourceRoot": "apps/modules/service-c/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/modules/service-c/tsconfig.app.json"
+      }
+    }
+
+  }
+}

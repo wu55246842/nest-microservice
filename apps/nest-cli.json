@@ -1,0 +1,38 @@
+{
+  "monorepo": true,
+  "root": "apps/main",
+  "sourceRoot": "apps/main/src",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/main/tsconfig.app.json"
+  },
+  "projects": {
+    "main": {
+      "type": "application",
+      "root": "apps/main",
+      "entryFile": "main",
+      "sourceRoot": "apps/main/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/main/tsconfig.app.json"
+      }
+    },
+    "service-a": {
+      "type": "application",
+      "root": "apps/service-a",
+      "entryFile": "main",
+      "sourceRoot": "apps/service-a/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/service-a/tsconfig.app.json"
+      }
+    },
+    "service-b": {
+      "type": "application",
+      "root": "apps/service-b",
+      "entryFile": "main",
+      "sourceRoot": "apps/service-b/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/service-b/tsconfig.app.json"
+      }
+    }
+  }
+}
